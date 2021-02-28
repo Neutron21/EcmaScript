@@ -44,3 +44,56 @@ console.log(person.name, person.age);
 // ES6
 let {name, age, country } = person;
 console.log(name, age, country);
+
+// Spread Operator (Operador de propagacion)
+// ES&
+let team1 = ['Oscar', 'Julian', 'Ricardo'];
+let team2 = ['Valeria', 'Jessica', 'Camila'];
+let education = ['David', ...team1, ...team2];
+console.log(education);
+
+// Const, Let y Var
+// ES6
+{
+    var globalVar = 'Global Var';
+}
+{
+    let globalLet = 'Global Let';
+    console.log(globalLet);
+}
+console.log(globalVar);
+console.log(globalLet); // Undefined
+
+const a = 'A';
+console.log(a);
+a = 'B'; // Inmutable
+console.log(a); 
+
+// Parametros en Objetos
+// Antes
+let nombre = 'Ivan';
+let edad = 33;
+
+let obj = {nombre: nombre, edad: edad};
+// ES6
+let obj2 = {nombre, edad}
+console.log(obj);
+console.log(obj2);
+
+// Arrow Functions
+const names = [
+    {nombre: 'Juan', edad: 23},
+    {nombre: 'Pedro', edad: 25},
+];
+// Antes
+let listNames = names.map(function (item) {
+    console.log(item.nombre);
+});
+// ES6
+let listNames2 = names.map(item => console.log(item.edad)); 
+let listNames3 = (name, age, country) => {
+    ... Bloque de codigo
+};
+let listNames4 = country => {
+    ... Bloque de codigo
+}
