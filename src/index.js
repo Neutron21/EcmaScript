@@ -92,8 +92,27 @@ let listNames = names.map(function (item) {
 // ES6
 let listNames2 = names.map(item => console.log(item.edad)); 
 let listNames3 = (name, age, country) => {
-    ... Bloque de codigo
+    // ... Bloque de codigo
 };
 let listNames4 = country => {
-    ... Bloque de codigo
+    // ... Bloque de codigo
+};
+
+const square =  num => num * num;
+console.log(square(6));
+
+// Promesas y asincronismo
+// ES6
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if(!true){
+            resolve("That's OK")
+        } else {
+            reject('Error!')
+        }
+    });
 }
+helloPromise()
+    .then(res => console.log(res))
+    .then(() => console.log('Hola'))
+    .catch(err => console.log(err));
