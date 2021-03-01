@@ -116,3 +116,21 @@ helloPromise()
     .then(res => console.log(res))
     .then(() => console.log('Hola'))
     .catch(err => console.log(err));
+
+class Calculator {
+    constructor(){
+        this.valA = 0;
+        this.valB = 0;
+    }
+    sum(a,b){
+        this.valA = a;
+        this.valB = b;
+        return this.valA + this.valB;
+    }
+}
+const calc = new Calculator();
+console.log(calc.sum(2,3));
+
+import { hello } from './module';
+
+console.log(hello());
